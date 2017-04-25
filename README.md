@@ -8,7 +8,7 @@ A simple app to keep track of intervals for the Couch to 5K program. Timings gat
 
 ## TODO
 
-- [ ] Visual guid for remaining time and current interval
+- [ ] Visual guide for remaining time and current interval
 - [ ] Ding to signify interval change
-- [ ] Uses local storage to track progress
+- [ ] Local storage to track progress
 - [ ] Robo voice for run/walk
