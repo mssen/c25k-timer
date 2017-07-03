@@ -1,7 +1,8 @@
-[
+export const DAYS = [
   {
-    "title": "Week 1, Day 1",
-    "intervals": [
+    week: 1,
+    day: 1,
+    intervals: [
       60, 90,
       60, 90,
       60, 90,
@@ -13,8 +14,9 @@
     ]
   },
   {
-    "title": "Week 1, Day 2",
-    "intervals": [
+    week: 1,
+    day: 2,
+    intervals: [
       60, 90,
       60, 90,
       60, 90,
@@ -26,8 +28,9 @@
     ]
   },
   {
-    "title": "Week 1, Day 3",
-    "intervals": [
+    week: 1,
+    day: 3,
+    intervals: [
       60, 90,
       60, 90,
       60, 90,
@@ -39,8 +42,9 @@
     ]
   },
   {
-    "title": "Week 2, Day 1",
-    "intervals": [
+    week: 2,
+    day: 1,
+    intervals: [
       90, 120,
       90, 120,
       90, 120,
@@ -50,8 +54,9 @@
     ]
   },
   {
-    "title": "Week 2, Day 2",
-    "intervals": [
+    week: 2,
+    day: 2,
+    intervals: [
       90, 120,
       90, 120,
       90, 120,
@@ -61,8 +66,9 @@
     ]
   },
   {
-    "title": "Week 2, Day 3",
-    "intervals": [
+    week: 2,
+    day: 3,
+    intervals: [
       90, 120,
       90, 120,
       90, 120,
@@ -72,8 +78,9 @@
     ]
   },
   {
-    "title": "Week 3, Day 1",
-    "intervals": [
+    week: 3,
+    day: 1,
+    intervals: [
       90, 90,
       180, 180,
       90, 90,
@@ -81,8 +88,9 @@
     ]
   },
   {
-    "title": "Week 3, Day 2",
-    "intervals": [
+    week: 3,
+    day: 2,
+    intervals: [
       90, 90,
       180, 180,
       90, 90,
@@ -90,8 +98,9 @@
     ]
   },
   {
-    "title": "Week 3, Day 3",
-    "intervals": [
+    week: 3,
+    day: 3,
+    intervals: [
       90, 90,
       180, 180,
       90, 90,
@@ -99,8 +108,9 @@
     ]
   },
   {
-    "title": "Week 4, Day 1",
-    "intervals": [
+    week: 4,
+    day: 1,
+    intervals: [
       180, 90,
       300, 150,
       180, 90,
@@ -108,8 +118,9 @@
     ]
   },
   {
-    "title": "Week 4, Day 2",
-    "intervals": [
+    week: 4,
+    day: 2,
+    intervals: [
       180, 90,
       300, 150,
       180, 90,
@@ -117,8 +128,9 @@
     ]
   },
   {
-    "title": "Week 4, Day 3",
-    "intervals": [
+    week: 4,
+    day: 3,
+    intervals: [
       180, 90,
       300, 150,
       180, 90,
@@ -126,98 +138,113 @@
     ]
   },
   {
-    "title": "Week 5, Day 1",
-    "intervals": [
+    week: 5,
+    day: 1,
+    intervals: [
       300, 180,
       300, 180,
       300
     ]
   },
   {
-    "title": "Week 5, Day 2",
-    "intervals": [
+    week: 5,
+    day: 2,
+    intervals: [
       480, 300,
       480
     ]
   },
   {
-    "title": "Week 5, Day 3",
-    "intervals": [
+    week: 5,
+    day: 3,
+    intervals: [
       1200
     ]
   },
   {
-    "title": "Week 6, Day 1",
-    "intervals": [
+    week: 6,
+    day: 1,
+    intervals: [
       300, 180,
       480, 180,
       300
     ]
   },
   {
-    "title": "Week 6, Day 2",
-    "intervals": [
+    week: 6,
+    day: 2,
+    intervals: [
       600, 180,
       600
     ]
   },
   {
-    "title": "Week 6, Day 3",
-    "intervals": [
+    week: 6,
+    day: 3,
+    intervals: [
       1500
     ]
   },
   {
-    "title": "Week 7, Day 1",
-    "intervals": [
+    week: 7,
+    day: 1,
+    intervals: [
       1500
     ]
   },
   {
-    "title": "Week 7, Day 2",
-    "intervals": [
+    week: 7,
+    day: 2,
+    intervals: [
       1500
     ]
   },
   {
-    "title": "Week 7, Day 3",
-    "intervals": [
+    week: 7,
+    day: 3,
+    intervals: [
       1500
     ]
   },
   {
-    "title": "Week 8, Day 1",
-    "intervals": [
+    week: 8,
+    day: 1,
+    intervals: [
       1680
     ]
   },
   {
-    "title": "Week 8, Day 2",
-    "intervals": [
+    week: 8,
+    day: 2,
+    intervals: [
       1680
     ]
   },
   {
-    "title": "Week 8, Day 3",
-    "intervals": [
+    week: 8,
+    day: 3,
+    intervals: [
       1680
     ]
   },
   {
-    "title": "Week 9, Day 1",
-    "intervals": [
+    week: 9,
+    day: 1,
+    intervals: [
       1800
     ]
   },
   {
-    "title": "Week 9, Day 2",
-    "intervals": [
+    week: 9,
+    day: 2,
+    intervals: [
       1800
     ]
   },
   {
-    "title": "Week 9, Day 3",
-    "intervals": [
+    week: 9,
+    day: 3,
+    intervals: [
       1800
     ]
   }
