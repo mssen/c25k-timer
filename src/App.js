@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import Timer from './components/Timer'
 import Navigation from './components/Navigation'
@@ -7,7 +7,7 @@ import './App.css';
 import { WARMUP, COOLDOWN } from './data/constants'
 import { SEGMENTS } from './data/segments'
 
-class App extends Component {
+class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = { segment: 0 };

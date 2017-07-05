@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 // Yes, this is basically the same thing as the stateful component example from: https://facebook.github.io/react/
-class Timer extends Component {
+class Timer extends React.Component {
   constructor(props) {
     super(props);
     this.state = { seconds: 0 }

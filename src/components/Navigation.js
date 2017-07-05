@@ -1,12 +1,12 @@
 import React from 'react';
 
 const Navigation = ({ week, day, triggerNavigation }) => {
-  const handleNext = (event) => {
+  const handleNext = () => {
     triggerNavigation(1);
     return false;
   }
 
-  const handlePrevious = (event) => {
+  const handlePrevious = () => {
     triggerNavigation(-1);
     return false;
   }
