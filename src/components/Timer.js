@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+// Yes, this is basically the same thing as the stateful component example from: https://facebook.github.io/react/
 class Timer extends Component {
   constructor(props) {
     super(props);
