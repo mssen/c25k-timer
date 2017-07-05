@@ -4,13 +4,36 @@ import React from 'react';
 class Timer extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { seconds: 0 }
+    this.state = {
+      seconds: 0,
+      intervalIndex: 0
+    }
   }
 
   tick() {
-    this.setState((prevState) => ({
-      seconds: prevState.seconds + 1
-    }));
+    const nextSeconds = this.state.seconds + 1;
+
+    // End of interval
+    if (nextSeconds > this.props.intervals[this.state.intervalIndex]) {
+
+      // End of segment
+      if (this.state.intervalIndex === this.props.intervals.length - 1) {
+        clearInterval(this.interval);
+
+      // On to the next segment
+      } else {
+        this.setState((prevState) => ({
+          seconds: 1,
+          intervalIndex: prevState.intervalIndex + 1
+        }));
+      }
+
+    // Business as usual
+    } else {
+      this.setState({
+        seconds: nextSeconds
+      });
+    }
   }
 
   componentDidMount() {
@@ -29,7 +52,7 @@ class Timer extends React.Component {
   render() {
     return (
       <div>
-        Total Time: { this.format(this.state.seconds) }
+        { `${this.format(this.state.seconds)} / ${this.format(this.props.intervals[this.state.intervalIndex])}` }
       </div>
     );
   }

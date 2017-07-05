@@ -4,13 +4,15 @@ import Timer from './components/Timer'
 import Navigation from './components/Navigation'
 
 import './App.css';
-import { WARMUP, COOLDOWN } from './data/constants'
 import { SEGMENTS } from './data/segments'
 
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { segment: 0 };
+    this.state = {
+      segment: 0,
+      interval: 0
+    };
 
     this.updateSegment = this.updateSegment.bind(this);
   }
@@ -28,6 +30,16 @@ class App extends React.Component {
         <h1>Week { segment.week }</h1>
         <h1>Day { segment.day }</h1>
         <p>Interval count: { segment.intervals.length }</p>
+
+        <div>
+          Segment
+          <Timer intervals={ segment.intervals } />
+        </div>
+
+        <div>
+          Total Time
+          <Timer intervals={ [ segment.intervals.reduce((prev, curr) => prev + curr) ] } />
+        </div>
 
         <Navigation
           week={ segment.week }
