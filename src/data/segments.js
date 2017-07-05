@@ -1,4 +1,4 @@
-export const DAYS = [
+export const SEGMENTS = [
   {
     week: 1,
     day: 1,
