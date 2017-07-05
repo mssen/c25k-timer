@@ -11,6 +11,14 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = { day: 0 };
+
+    this.updateDay = this.updateDay.bind(this);
+  }
+
+  updateDay(adjustment) {
+    this.setState((prevState) => ({
+      day: prevState.day + adjustment
+    }));
   }
 
   render() {
@@ -24,7 +32,7 @@ class App extends Component {
         <Navigation
           week={ day.week }
           day={ day.day }
-          triggerNavigation={ (week, day) => console.log(`Week ${week}, Day ${day}`) } />
+          triggerNavigation={ this.updateDay } />
       </div>
     );
   }
