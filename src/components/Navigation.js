@@ -15,12 +15,12 @@ const Navigation = ({ week, day, triggerNavigation }) => {
     <div>
       {
         !(week === 1 && day === 1)
-          && <a href="#" onClick={ handlePrevious }>&lsaquo;&lsaquo; Week { day === 1 ? week - 1 : week }, Day { day === 1 ? 3 : day - 1 }</a>
+          && <button onClick={ handlePrevious }>&lsaquo;&lsaquo; Week { day === 1 ? week - 1 : week }, Day { day === 1 ? 3 : day - 1 }</button>
       }
       ...
       {
         !(week === 9 && day === 3)
-          && <a href="#" onClick={ handleNext }>Week { day === 3 ? week + 1 : week }, Day { day === 3 ? 1 : day + 1 } &rsaquo;&rsaquo;</a>
+          && <button onClick={ handleNext }>Week { day === 3 ? week + 1 : week }, Day { day === 3 ? 1 : day + 1 } &rsaquo;&rsaquo;</button>
       }
     </div>
   )
