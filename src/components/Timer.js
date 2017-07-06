@@ -22,10 +22,12 @@ class Timer extends React.Component {
 
       // On to the next segment
       } else {
-        this.setState((prevState) => ({
+        const newIntervalIndex = this.state.intervalIndex + 1;
+        this.setState(({
           seconds: 1,
-          intervalIndex: prevState.intervalIndex + 1
+          intervalIndex: newIntervalIndex
         }));
+        this.props.updateInterval(newIntervalIndex);
       }
 
     // Business as usual
