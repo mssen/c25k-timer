@@ -27,17 +27,31 @@ class App extends React.Component {
 
   updateInterval(newInterval) {
     this.setState({ interval: newInterval });
-  } 
+  }
+
+  getIntervalType() {
+    const currentInterval = this.state.interval;
+    if (currentInterval === 0) {
+      return 'Warmup';
+    } else if (currentInterval === SEGMENTS[this.state.segment].intervals.length - 1) {
+      return 'Cooldown';
+    } else if (currentInterval % 2 === 1) {
+      return 'Run';
+    } else {
+      return 'Walk';
+    }
+  }
 
   render() {
     const segment = SEGMENTS[this.state.segment];
+
     return (
       <div className="main">
         <h1>Week { segment.week }</h1>
         <h1>Day { segment.day }</h1>
 
         <div>
-          Segment
+          { this.getIntervalType() }
           <Timer intervals={ segment.intervals } updateInterval={ this.updateInterval } />
         </div>
 
