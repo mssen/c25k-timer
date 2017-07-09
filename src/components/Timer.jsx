@@ -19,6 +19,7 @@ class Timer extends React.Component {
       // End of segment
       if (this.state.intervalIndex === this.props.intervals.length - 1) {
         clearInterval(this.interval);
+        this.interval = false;
 
       // On to the next segment
       } else {
@@ -44,6 +45,19 @@ class Timer extends React.Component {
 
   componentWillUnmount() {
     clearInterval(this.interval);
+  }
+
+  componentWillReceiveProps(nextProps) {
+    console.log(`Next: ${nextProps.segment}`);
+    if (nextProps.segment !== this.props.segment) {
+      this.setState({
+        seconds: 0,
+        intervalIndex: 0
+      });
+      if (!this.interval) {
+        this.interval = setInterval(() => this.tick(), 1000);
+      }
+    }
   }
 
   format(seconds) {

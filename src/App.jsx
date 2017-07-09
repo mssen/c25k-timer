@@ -21,7 +21,8 @@ class App extends React.Component {
 
   updateSegment(adjustment) {
     this.setState((prevState) => ({
-      segment: prevState.segment + adjustment
+      segment: prevState.segment + adjustment,
+      interval: 0
     }));
   }
 
@@ -52,12 +53,18 @@ class App extends React.Component {
 
         <div>
           { this.getIntervalType() }
-          <Timer intervals={ segment.intervals } updateInterval={ this.updateInterval } />
+          <Timer
+            intervals={ segment.intervals }
+            updateInterval={ this.updateInterval }
+            segment={ this.state.segment } />
         </div>
 
         <div>
           Total Time
-          <Timer intervals={ [ segment.intervals.reduce((prev, curr) => prev + curr) ] } />
+          <Timer
+            intervals={ [ segment.intervals.reduce((prev, curr) => prev + curr) ] }
+            updateInterval={ () => '' }
+            segment={ this.state.segment } />
         </div>
 
         <IntervalTracker current={ this.state.interval } total={ segment.intervals.length - 2 } />
