@@ -3,6 +3,7 @@ import React from 'react';
 import Timer from './components/Timer';
 import Navigation from './components/Navigation';
 import IntervalTracker from './components/IntervalTracker';
+import PickerModal from './components/PickerModal';
 
 import './App.css';
 import { SEGMENTS } from './data/segments';
@@ -12,11 +13,14 @@ class App extends React.Component {
     super(props);
     this.state = {
       segment: 0,
-      interval: 0
+      interval: 0,
+      showModal: false
     };
 
     this.updateSegment = this.updateSegment.bind(this);
     this.updateInterval = this.updateInterval.bind(this);
+    this.hideModal = this.hideModal.bind(this);
+    this.showModal = this.showModal.bind(this);
   }
 
   updateSegment(adjustment) {
@@ -28,6 +32,18 @@ class App extends React.Component {
 
   updateInterval(newInterval) {
     this.setState({ interval: newInterval });
+  }
+
+  showModal() {
+    this.setState({
+      showModal: true
+    })
+  }
+
+  hideModal() {
+    this.setState({
+      showModal: false
+    })
   }
 
   getIntervalType() {
@@ -72,7 +88,15 @@ class App extends React.Component {
         <Navigation
           week={ segment.week }
           day={ segment.day }
-          triggerNavigation={ this.updateSegment } />
+          triggerNavigation={ this.updateSegment }
+          showModal={ this.showModal } />
+
+        {
+          this.state.showModal
+            && <PickerModal segments={ SEGMENTS }
+                currentSegment={ this.state.segment }
+                hideModal={ this.hideModal } />
+        }
       </div>
     );
   }
