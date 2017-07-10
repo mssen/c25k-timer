@@ -48,7 +48,6 @@ class Timer extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    console.log(`Next: ${nextProps.segment}`);
     if (nextProps.segment !== this.props.segment) {
       this.setState({
         seconds: 0,
