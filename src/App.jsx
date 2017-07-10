@@ -95,6 +95,7 @@ class App extends React.Component {
           this.state.showModal
             && <PickerModal segments={ SEGMENTS }
                 currentSegment={ this.state.segment }
+                updateSegment={ this.updateSegment }
                 hideModal={ this.hideModal } />
         }
       </div>
