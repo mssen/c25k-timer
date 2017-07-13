@@ -18,8 +18,7 @@ class Timer extends React.Component {
 
       // End of segment
       if (this.state.intervalIndex === this.props.intervals.length - 1) {
-        clearInterval(this.interval);
-        this.interval = false;
+        this.stop();
 
       // On to the next segment
       } else {
@@ -39,12 +38,21 @@ class Timer extends React.Component {
     }
   }
 
-  componentDidMount() {
+  start() {
     this.interval = setInterval(() => this.tick(), 1000);
   }
 
-  componentWillUnmount() {
+  stop() {
     clearInterval(this.interval);
+    this.interval = false;
+  }
+
+  componentDidMount() {
+    this.start();
+  }
+
+  componentWillUnmount() {
+    this.stop();
   }
 
   componentWillReceiveProps(nextProps) {
@@ -54,7 +62,7 @@ class Timer extends React.Component {
         intervalIndex: 0
       });
       if (!this.interval) {
-        this.interval = setInterval(() => this.tick(), 1000);
+        this.start();
       }
     }
   }
