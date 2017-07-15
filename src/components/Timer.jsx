@@ -48,7 +48,7 @@ class Timer extends React.Component {
   }
 
   componentDidMount() {
-    this.start();
+    this.props.play && this.start();
   }
 
   componentWillUnmount() {
@@ -61,9 +61,12 @@ class Timer extends React.Component {
         seconds: 0,
         intervalIndex: 0
       });
-      if (!this.interval) {
-        this.start();
-      }
+    }
+    if (!this.interval && nextProps.play) {
+      this.start();
+    }
+    if (this.interval && !nextProps.play) {
+      this.stop();
     }
   }
 

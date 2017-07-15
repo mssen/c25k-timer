@@ -14,19 +14,22 @@ class App extends React.Component {
     this.state = {
       segment: 0,
       interval: 0,
-      showModal: false
+      showModal: false,
+      play: false
     };
 
     this.updateSegment = this.updateSegment.bind(this);
     this.updateInterval = this.updateInterval.bind(this);
     this.hideModal = this.hideModal.bind(this);
     this.showModal = this.showModal.bind(this);
+    this.playPause = this.playPause.bind(this);
   }
 
   updateSegment(adjustment) {
     this.setState((prevState) => ({
       segment: prevState.segment + adjustment,
-      interval: 0
+      interval: 0,
+      play: false
     }));
   }
 
@@ -37,13 +40,19 @@ class App extends React.Component {
   showModal() {
     this.setState({
       showModal: true
-    })
+    });
   }
 
   hideModal() {
     this.setState({
       showModal: false
-    })
+    });
+  }
+
+  playPause() {
+    this.setState((prevState) => ({
+      play: !prevState.play
+    }));
   }
 
   getIntervalType() {
@@ -72,7 +81,12 @@ class App extends React.Component {
           <Timer
             intervals={ segment.intervals }
             updateInterval={ this.updateInterval }
-            segment={ this.state.segment } />
+            segment={ this.state.segment }
+            play={ this.state.play } />
+        </div>
+
+        <div>
+          <button onClick={ this.playPause }>{ this.state.play ? 'Pause' : 'Play' }</button>
         </div>
 
         <div>
@@ -80,7 +94,8 @@ class App extends React.Component {
           <Timer
             intervals={ [ segment.intervals.reduce((prev, curr) => prev + curr) ] }
             updateInterval={ () => '' }
-            segment={ this.state.segment } />
+            segment={ this.state.segment }
+            play={ this.state.play } />
         </div>
 
         <IntervalTracker current={ this.state.interval } total={ segment.intervals.length - 2 } />
