@@ -7,6 +7,7 @@ import PickerModal from './components/PickerModal';
 
 import './App.css';
 import { SEGMENTS } from './data/segments';
+import ding from './data/265012__sethlind__toaster-oven-ding.mp3'
 
 class App extends React.Component {
   constructor(props) {
@@ -17,6 +18,8 @@ class App extends React.Component {
       showModal: false,
       play: false
     };
+
+    this.audio = new Audio(ding);
 
     this.updateSegment = this.updateSegment.bind(this);
     this.updateInterval = this.updateInterval.bind(this);
@@ -35,6 +38,7 @@ class App extends React.Component {
 
   updateInterval(newInterval) {
     this.setState({ interval: newInterval });
+    this.audio.play();
   }
 
   showModal() {
