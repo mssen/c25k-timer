@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders weeks and days 1`] = `
+<div>
+  <header>
+    <h1>
+      Pick a Day
+    </h1>
+    <button>
+      Close
+    </button>
+  </header>
+  <button
+    onClick={[Function]}
+  >
+    Week 1, Day 1
+  </button>
+  <button
+    onClick={[Function]}
+  >
+    Week 1, Day 2
+  </button>
+  <button
+    onClick={[Function]}
+  >
+    Week 1, Day 3
+  </button>
+  <button
+    onClick={[Function]}
+  >
+    Week 2, Day 1
+  </button>
+  <button
+    onClick={[Function]}
+  >
+    Week 2, Day 2
+  </button>
+  <button
+    onClick={[Function]}
+  >
+    Week 2, Day 3
+  </button>
+</div>
+`;
