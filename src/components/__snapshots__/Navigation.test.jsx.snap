@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the correct previous and next week/day in middle of week 1`] = `
+<div>
+  <button
+    onClick={[Function]}
+  >
+    ‹‹ Week 
+    1
+    , Day 
+    1
+  </button>
+  <button>
+    ...
+  </button>
+  <button
+    onClick={[Function]}
+  >
+    Week 
+    1
+    , Day 
+    3
+     ››
+  </button>
+</div>
+`;
+
+exports[`renders the correct previous and next week/day on first day of week 1`] = `
+<div>
+  <button
+    onClick={[Function]}
+  >
+    ‹‹ Week 
+    2
+    , Day 
+    3
+  </button>
+  <button>
+    ...
+  </button>
+  <button
+    onClick={[Function]}
+  >
+    Week 
+    3
+    , Day 
+    2
+     ››
+  </button>
+</div>
+`;
+
+exports[`renders the correct previous and next week/day on last day of week 1`] = `
+<div>
+  <button
+    onClick={[Function]}
+  >
+    ‹‹ Week 
+    1
+    , Day 
+    2
+  </button>
+  <button>
+    ...
+  </button>
+  <button
+    onClick={[Function]}
+  >
+    Week 
+    2
+    , Day 
+    1
+     ››
+  </button>
+</div>
+`;
