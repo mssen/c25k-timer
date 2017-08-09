@@ -20,7 +20,7 @@ class Timer extends React.Component {
       if (this.state.intervalIndex === this.props.intervals.length - 1) {
         this.stop();
 
-      // On to the next segment
+      // On to the next interval
       } else {
         const newIntervalIndex = this.state.intervalIndex + 1;
         this.setState(({
