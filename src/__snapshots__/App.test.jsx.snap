@@ -1,0 +1,185 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`can start/pause 1`] = `
+Array [
+  <Timer
+    intervals={
+        Array [
+            2,
+            5,
+            10,
+            2,
+          ]
+    }
+    play={false}
+    segment={0}
+    updateInterval={[Function]}
+>
+    <div>
+        0:00 / 0:02
+    </div>
+</Timer>,
+  <Timer
+    intervals={
+        Array [
+            19,
+          ]
+    }
+    play={false}
+    segment={0}
+    updateInterval={[Function]}
+>
+    <div>
+        0:00 / 0:19
+    </div>
+</Timer>,
+]
+`;
+
+exports[`can start/pause 2`] = `
+Array [
+  <Timer
+    intervals={
+        Array [
+            2,
+            5,
+            10,
+            2,
+          ]
+    }
+    play={true}
+    segment={0}
+    updateInterval={[Function]}
+>
+    <div>
+        0:01 / 0:02
+    </div>
+</Timer>,
+  <Timer
+    intervals={
+        Array [
+            19,
+          ]
+    }
+    play={true}
+    segment={0}
+    updateInterval={[Function]}
+>
+    <div>
+        0:01 / 0:19
+    </div>
+</Timer>,
+]
+`;
+
+exports[`can start/pause 3`] = `
+Array [
+  <Timer
+    intervals={
+        Array [
+            2,
+            5,
+            10,
+            2,
+          ]
+    }
+    play={false}
+    segment={0}
+    updateInterval={[Function]}
+>
+    <div>
+        0:01 / 0:02
+    </div>
+</Timer>,
+  <Timer
+    intervals={
+        Array [
+            19,
+          ]
+    }
+    play={false}
+    segment={0}
+    updateInterval={[Function]}
+>
+    <div>
+        0:01 / 0:19
+    </div>
+</Timer>,
+]
+`;
+
+exports[`gets correct interval type gets cooldown 1`] = `
+<div>
+  Cooldown
+  <Timer
+    intervals={
+      Array [
+        2,
+        5,
+        10,
+        2,
+      ]
+    }
+    play={false}
+    segment={0}
+    updateInterval={[Function]}
+  />
+</div>
+`;
+
+exports[`gets correct interval type gets run 1`] = `
+<div>
+  Run
+  <Timer
+    intervals={
+      Array [
+        2,
+        5,
+        10,
+        2,
+      ]
+    }
+    play={false}
+    segment={0}
+    updateInterval={[Function]}
+  />
+</div>
+`;
+
+exports[`gets correct interval type gets walk 1`] = `
+<div>
+  Walk
+  <Timer
+    intervals={
+      Array [
+        2,
+        5,
+        10,
+        2,
+      ]
+    }
+    play={false}
+    segment={0}
+    updateInterval={[Function]}
+  />
+</div>
+`;
+
+exports[`gets correct interval type gets warmup 1`] = `
+<div>
+  Warmup
+  <Timer
+    intervals={
+      Array [
+        2,
+        5,
+        10,
+        2,
+      ]
+    }
+    play={false}
+    segment={0}
+    updateInterval={[Function]}
+  />
+</div>
+`;
