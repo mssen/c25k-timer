@@ -77,11 +77,13 @@ class App extends React.Component {
 
     return (
       <div className="main">
-        <h1>Week { segment.week }</h1>
-        <h1>Day { segment.day }</h1>
+        <h1 className="main-header">Week { segment.week }</h1>
+        <h1 className="main-header gray">Day { segment.day }</h1>
 
-        <div>
-          { this.getIntervalType() }
+        <div className="interval-timer center">
+          <span className="interval-text gray">
+            { this.getIntervalType() }
+          </span>
           <Timer
             intervals={ segment.intervals }
             updateInterval={ this.updateInterval }
@@ -89,26 +91,33 @@ class App extends React.Component {
             play={ this.state.play } />
         </div>
 
-        <div>
-          <button onClick={ this.playPause }>{ this.state.play ? 'Pause' : 'Play' }</button>
+        <div className="horizontal">
+          <div>
+            <h2>Total Time</h2>
+            <Timer
+              intervals={ [ segment.intervals.reduce((prev, curr) => prev + curr) ] }
+              updateInterval={ () => '' }
+              segment={ this.state.segment }
+              play={ this.state.play } />
+          </div>
+
+          <div>
+            <button onClick={ this.playPause }>{ this.state.play ? 'Pause' : 'Play' }</button>
+          </div>
+
+          <div className="intervals">
+            <h2>Intervals</h2>
+            <IntervalTracker current={ this.state.interval } total={ segment.intervals.length - 2 } />
+          </div>
         </div>
 
-        <div>
-          Total Time
-          <Timer
-            intervals={ [ segment.intervals.reduce((prev, curr) => prev + curr) ] }
-            updateInterval={ () => '' }
-            segment={ this.state.segment }
-            play={ this.state.play } />
+        <div className="center">
+          <Navigation
+            week={ segment.week }
+            day={ segment.day }
+            triggerNavigation={ this.updateSegment }
+            showModal={ this.showModal } />
         </div>
-
-        <IntervalTracker current={ this.state.interval } total={ segment.intervals.length - 2 } />
-
-        <Navigation
-          week={ segment.week }
-          day={ segment.day }
-          triggerNavigation={ this.updateSegment }
-          showModal={ this.showModal } />
 
         {
           this.state.showModal

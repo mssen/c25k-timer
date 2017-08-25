@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './Timer.css';
+
 // Yes, this is basically the same thing as the stateful component example from: https://facebook.github.io/react/
 class Timer extends React.Component {
   constructor(props) {
@@ -78,7 +80,12 @@ class Timer extends React.Component {
   render() {
     return (
       <div>
-        { `${this.format(this.state.seconds)} / ${this.format(this.props.intervals[this.state.intervalIndex])}` }
+        <span className="current-time">
+          { this.format(this.state.seconds) }
+        </span>
+        <span className="total-time">
+          /{ this.format(this.props.intervals[this.state.intervalIndex]) }
+        </span>
       </div>
     );
   }
