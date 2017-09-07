@@ -17,4 +17,3 @@ A simple app to keep track of intervals for the Couch to 5K program. Timings gat
 - [ ] Local storage to track progress
 - [ ] Actual routing with paths
 - [x] Pause
-- [ ] Robo voice for run/walk
