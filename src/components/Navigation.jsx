@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Navigation = ({ week, day, triggerNavigation, showModal }) => {
   const handleNext = () => {
@@ -24,6 +25,13 @@ const Navigation = ({ week, day, triggerNavigation, showModal }) => {
       }
     </div>
   )
+}
+
+Navigation.propTypes =  {
+  week: PropTypes.number.isRequired,
+  day: PropTypes.number.isRequired,
+  triggerNavigation: PropTypes.func.isRequired,
+  showModal: PropTypes.func.isRequired
 }
 
 export default Navigation;

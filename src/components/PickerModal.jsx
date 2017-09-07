@@ -1,5 +1,6 @@
 
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const PickerModal = ({ segments, currentSegment, hideModal, updateSegment }) => (
   <div>
@@ -18,5 +19,12 @@ const PickerModal = ({ segments, currentSegment, hideModal, updateSegment }) => 
     }
   </div>
 );
+
+PickerModal.propTypes = {
+  segments: PropTypes.array.isRequired,
+  currentSegment: PropTypes.number.isRequired,
+  hideModal: PropTypes.func.isRequired,
+  updateSegment: PropTypes.func.isRequired
+}
 
 export default PickerModal;

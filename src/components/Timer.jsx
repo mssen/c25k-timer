@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import './Timer.css';
 
@@ -89,6 +90,13 @@ class Timer extends React.Component {
       </div>
     );
   }
+}
+
+Timer.propTypes = {
+  intervals: PropTypes.array.isRequired,
+  updateInterval: PropTypes.func.isRequired,
+  segment: PropTypes.number.isRequired,
+  play: PropTypes.bool.isRequired
 }
 
 export default Timer;

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const IntervalTracker = ({ current, total }) => (
   <div>
@@ -11,5 +12,10 @@ const IntervalTracker = ({ current, total }) => (
     } 
   </div>
 );
+
+IntervalTracker.propTypes = {
+  current: PropTypes.number.isRequired,
+  total: PropTypes.number.isRequired
+}
 
 export default IntervalTracker;
