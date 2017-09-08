@@ -12,24 +12,24 @@ const segments = [
   ];
 
 it('renders without crashing', () => {
-  shallow(<PickerModal segments={ [] } />);
+  shallow(<PickerModal segments={ [] } currentSegment={ 0 } hideModal={ () =>'' } updateSegment={ () => '' } />);
 });
 
 it('renders weeks and days', () => {
-  const wrapper = shallow(<PickerModal segments={ segments } />);
+  const wrapper = shallow(<PickerModal segments={ segments } currentSegment={ 0 } hideModal={ () =>'' } updateSegment={ () => '' } />);
   expect(wrapper).toMatchSnapshot();
 });
 
 it('handles hiding the modal', () => {
   const hideModalStub = jest.fn();
-  const wrapper = shallow(<PickerModal segments={ [] }  hideModal={ hideModalStub } />);
+  const wrapper = shallow(<PickerModal segments={ [] } currentSegment={ 0 } hideModal={ hideModalStub } updateSegment={ () => '' } />);
   wrapper.find('button').first().simulate('click');
   expect(hideModalStub).toBeCalled();
 });
 
 it('handles updating the segment', () => {
   const updateSegmentStub = jest.fn();
-  const wrapper = shallow(<PickerModal segments={ segments } currentSegment={ 3 }  updateSegment={ updateSegmentStub } />);
+  const wrapper = shallow(<PickerModal segments={ segments } currentSegment={ 3 } hideModal={ () =>'' } updateSegment={ updateSegmentStub } />);
   wrapper.find('div > button').first().simulate('click');
   expect(updateSegmentStub).toBeCalledWith(-3);
 });

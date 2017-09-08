@@ -3,7 +3,7 @@ import { shallow } from 'enzyme';
 import IntervalTracker from './IntervalTracker';
 
 it('renders without crashing', () => {
-  shallow(<IntervalTracker />);
+  shallow(<IntervalTracker  current={ 0 } total={ 0 } />);
 });
 
 it('shows Warmup when current interval is 0', () => {

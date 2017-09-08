@@ -6,7 +6,9 @@ exports[`renders weeks and days 1`] = `
     <h1>
       Pick a Day
     </h1>
-    <button>
+    <button
+      onClick={[Function]}
+    >
       Close
     </button>
   </header>

@@ -10,7 +10,9 @@ exports[`renders the correct previous and next week/day in middle of week 1`] = 
     , Day 
     1
   </button>
-  <button>
+  <button
+    onClick={[Function]}
+  >
     ...
   </button>
   <button
@@ -35,7 +37,9 @@ exports[`renders the correct previous and next week/day on first day of week 1`]
     , Day 
     3
   </button>
-  <button>
+  <button
+    onClick={[Function]}
+  >
     ...
   </button>
   <button
@@ -60,7 +64,9 @@ exports[`renders the correct previous and next week/day on last day of week 1`] 
     , Day 
     2
   </button>
-  <button>
+  <button
+    onClick={[Function]}
+  >
     ...
   </button>
   <button
