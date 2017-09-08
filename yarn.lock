@@ -3,8 +3,8 @@
 
 
 "@types/react@^15.0.22":
-  version "15.0.38"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-15.0.38.tgz#6afea31a9fe66304af474106ba372ddaba449995"
+  version "15.6.2"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-15.6.2.tgz#2c8495aa853cb37591d0046e9afe544fb837c612"
 
 abab@^1.0.3:
   version "1.0.3"
@@ -2090,9 +2090,9 @@ entities@^1.1.1, entities@~1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/entities/-/entities-1.1.1.tgz#6e5c2d0a5621b5dadaecef80b90edfb5cd7772f0"
 
-enzyme-matchers@^3.5.3:
-  version "3.5.3"
-  resolved "https://registry.yarnpkg.com/enzyme-matchers/-/enzyme-matchers-3.5.3.tgz#afd1549997c6f9db1963d702784d369032747cf4"
+enzyme-matchers@^3.8.2:
+  version "3.8.2"
+  resolved "https://registry.yarnpkg.com/enzyme-matchers/-/enzyme-matchers-3.8.2.tgz#bf3c8d2dfea3d372e4895cf22dda3f5154614833"
   dependencies:
     deep-equal-ident "^1.1.1"
 
@@ -2738,8 +2738,8 @@ function-bind@^1.0.2, function-bind@^1.1.0:
   resolved "https://registry.yarnpkg.com/function-bind/-/function-bind-1.1.0.tgz#16176714c801798e4e8f2cf7f7529467bb4a5771"
 
 function.prototype.name@^1.0.0:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/function.prototype.name/-/function.prototype.name-1.0.2.tgz#b511a1a15d35fb4834cb35464b6b6b03f4e543ea"
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/function.prototype.name/-/function.prototype.name-1.0.3.tgz#0099ae5572e9dd6f03c97d023fd92bcc5e639eac"
   dependencies:
     define-properties "^1.1.2"
     function-bind "^1.1.0"
@@ -3606,12 +3606,12 @@ jest-environment-node@^20.0.3:
     jest-mock "^20.0.3"
     jest-util "^20.0.3"
 
-jest-enzyme@^3.5.3:
-  version "3.5.3"
-  resolved "https://registry.yarnpkg.com/jest-enzyme/-/jest-enzyme-3.5.3.tgz#939c8793ac4e8b954ccfb20c48678727cf335cd5"
+jest-enzyme@^3.8.2:
+  version "3.8.2"
+  resolved "https://registry.yarnpkg.com/jest-enzyme/-/jest-enzyme-3.8.2.tgz#b0352ca90193b4acc15509206ec68ddc41d98b6d"
   dependencies:
     "@types/react" "^15.0.22"
-    enzyme-matchers "^3.5.3"
+    enzyme-matchers "^3.8.2"
     enzyme-to-json "^1.5.0"
 
 jest-haste-map@^20.0.4:
