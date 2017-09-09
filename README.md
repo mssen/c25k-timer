@@ -14,6 +14,7 @@ A simple app to keep track of intervals for the Couch to 5K program. Timings gat
 
 - [x] Visual guide for remaining time and current interval
 - [x] Ding to signify interval change
+- [x] Pause
 - [ ] Local storage to track progress
 - [ ] Actual routing with paths
-- [x] Pause
+- [ ] Pretty up the spacing
