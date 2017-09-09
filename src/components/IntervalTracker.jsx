@@ -1,17 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const IntervalTracker = ({ current, total }) => (
-  <div>
-    {
-      current === 0
-        ? 'Warmup'
-        : current > total
-          ? 'Cooldown'
-          : `${ current }/${ total }`
-    } 
-  </div>
-);
+import './IntervalTracker.css';
+
+const IntervalTracker = ({ current, total }) => {
+  const displayCurrent = current > total ? current - 1 : current;
+
+  return (
+    <div>
+      <span className="current-interval">{ displayCurrent }</span>
+      /
+      <span className="total-interval">{ total }</span>
+    </div>
+  )
+};
 
 IntervalTracker.propTypes = {
   current: PropTypes.number.isRequired,
