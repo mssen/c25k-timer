@@ -93,7 +93,7 @@ class App extends React.Component {
 
         <div className="horizontal">
           <div>
-            <h2>Total Time</h2>
+            <h2 className="sub-header">Total Time</h2>
             <Timer
               intervals={ [ segment.intervals.reduce((prev, curr) => prev + curr) ] }
               updateInterval={ () => '' }
@@ -102,11 +102,13 @@ class App extends React.Component {
           </div>
 
           <div>
-            <button onClick={ this.playPause }>{ this.state.play ? 'Pause' : 'Play' }</button>
+            <button onClick={ this.playPause }>
+              { this.state.play ? 'Pause' : 'Play' }
+            </button>
           </div>
 
           <div className="intervals">
-            <h2>Intervals</h2>
+            <h2 className="sub-header">Intervals</h2>
             <IntervalTracker current={ this.state.interval } total={ segment.intervals.length - 2 } />
           </div>
         </div>

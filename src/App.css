@@ -21,6 +21,11 @@
   font-size: 50px;
 }
 
+.sub-header {
+  color: gray;
+  text-transform: uppercase;
+}
+
 .interval-timer {
   margin: 40px 0;
   display: flex;
