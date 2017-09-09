@@ -113,7 +113,7 @@ class App extends React.Component {
           </div>
         </div>
 
-        <div className="center">
+        <div className="center navigation">
           <Navigation
             week={ segment.week }
             day={ segment.day }

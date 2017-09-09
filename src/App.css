@@ -46,6 +46,10 @@
   border: 5px solid black;
 }
 
+.navigation {
+  margin-top: 60px;
+}
+
 .gray {
   color: gray;
 }
