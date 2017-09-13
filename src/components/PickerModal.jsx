@@ -1,22 +1,30 @@
-
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import "./PickerModal.css";
+
 const PickerModal = ({ segments, currentSegment, hideModal, updateSegment }) => (
   <div>
-    <header>
-      <h1>Pick a Day</h1>
+    <div className="overlay"></div>
+    <div className="modal-container">
+      <div className="modal">
+        <header className="modal-header">
+          <h1>Pick a Day</h1>
 
-      <button onClick={ hideModal }>Close</button>
-    </header>
+          <button className="close-button" onClick={ hideModal }>✕</button>
+        </header>
 
-    {
-      segments.map((segment, index) => 
-        <button key={ index } onClick={ () => updateSegment(index - currentSegment) }>
-          { `Week ${segment.week}, Day ${segment.day}` }
-        </button>
-      )
-    }
+        <div className="modal-body">
+          {
+            segments.map((segment, index) => 
+              <button className="picker-button" key={ index } onClick={ () => updateSegment(index - currentSegment) }>
+                { `Week ${segment.week}, Day ${segment.day}` }
+              </button>
+            )
+          }
+        </div>
+      </div>
+    </div>
   </div>
 );
 
