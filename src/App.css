@@ -1,7 +1,6 @@
 .main {
   margin: 20px 40px;
   height: calc(100vh - 40px); /* Minus top + bottom margins */
-  font-family: Arial, Helvetica, sans-serif;
   display: flex;
   flex-direction: column;
 }
