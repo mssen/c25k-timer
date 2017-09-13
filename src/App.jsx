@@ -32,7 +32,8 @@ class App extends React.Component {
     this.setState((prevState) => ({
       segment: prevState.segment + adjustment,
       interval: 0,
-      play: false
+      play: false,
+      showModal: false
     }));
   }
 
