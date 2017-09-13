@@ -4,7 +4,6 @@ A simple app to keep track of intervals for the Couch to 5K program. Timings gat
 
 ## Features
 
-- Un-styled ugliness
 - Counters for interval time, total time, and interval count
 - Visual tracking of when to run or walk
 - Ding to signify interval end
@@ -17,4 +16,4 @@ A simple app to keep track of intervals for the Couch to 5K program. Timings gat
 - [x] Pause
 - [ ] Local storage to track progress
 - [ ] Actual routing with paths
-- [ ] Pretty up the spacing
+- [x] Pretty up the spacing
