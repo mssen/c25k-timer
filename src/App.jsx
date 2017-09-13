@@ -101,7 +101,7 @@ class App extends React.Component {
               play={ this.state.play } />
           </div>
 
-          <div>
+          <div className="play-container">
             <button className="play-button" onClick={ this.playPause }>
               { this.state.play ? 'Pause' : 'Play' }
             </button>

@@ -1,5 +1,6 @@
 .main {
-  margin: 20px;
+  margin: 20px 40px;
+  height: calc(100vh - 40px); /* Minus top + bottom margins */
   font-family: Arial, Helvetica, sans-serif;
   display: flex;
   flex-direction: column;
@@ -12,8 +13,13 @@
 .horizontal {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
+  flex-grow: 1;
+  margin-top: 40px;
+  justify-content: space-between;
+}
+
+.horizontal > div {
+  flex: 1 1 0;
 }
 
 .main-header {
@@ -24,6 +30,13 @@
 .sub-header {
   color: gray;
   text-transform: uppercase;
+  margin-top: 0;
+}
+
+.intervals {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 .interval-timer {
@@ -35,6 +48,12 @@
 .interval-text {
   text-transform: uppercase;
   font-size: 40px;
+}
+
+.play-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .play-button {
