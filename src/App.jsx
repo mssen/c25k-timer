@@ -7,7 +7,7 @@ import PickerModal from './components/PickerModal';
 
 import './App.css';
 import { SEGMENTS } from './data/segments';
-import ding from './data/265012__sethlind__toaster-oven-ding.mp3'
+import ding from './data/265012__sethlind__toaster-oven-ding.mp3';
 
 class App extends React.Component {
   constructor(props) {
@@ -29,7 +29,7 @@ class App extends React.Component {
   }
 
   updateSegment(adjustment) {
-    this.setState((prevState) => ({
+    this.setState(prevState => ({
       segment: prevState.segment + adjustment,
       interval: 0,
       play: false,
@@ -55,7 +55,7 @@ class App extends React.Component {
   }
 
   playPause() {
-    this.setState((prevState) => ({
+    this.setState(prevState => ({
       play: !prevState.play
     }));
   }
@@ -78,57 +78,59 @@ class App extends React.Component {
 
     return (
       <div className="main">
-        <h1 className="main-header">Week { segment.week }</h1>
-        <h1 className="main-header gray">Day { segment.day }</h1>
+        <h1 className="main-header">Week {segment.week}</h1>
+        <h1 className="main-header gray">Day {segment.day}</h1>
 
         <div className="interval-timer center">
-          <span className="interval-text gray">
-            { this.getIntervalType() }
-          </span>
+          <span className="interval-text gray">{this.getIntervalType()}</span>
           <Timer
-            intervals={ segment.intervals }
-            updateInterval={ this.updateInterval }
-            segment={ this.state.segment }
-            play={ this.state.play } />
+            intervals={segment.intervals}
+            updateInterval={this.updateInterval}
+            segment={this.state.segment}
+            play={this.state.play}
+          />
         </div>
 
         <div className="horizontal">
           <div>
             <h2 className="sub-header">Total Time</h2>
             <Timer
-              intervals={ [ segment.intervals.reduce((prev, curr) => prev + curr) ] }
-              updateInterval={ () => '' }
-              segment={ this.state.segment }
-              play={ this.state.play } />
+              intervals={[segment.intervals.reduce((prev, curr) => prev + curr)]}
+              updateInterval={() => ''}
+              segment={this.state.segment}
+              play={this.state.play}
+            />
           </div>
 
           <div className="play-container">
-            <button className="play-button" onClick={ this.playPause }>
-              { this.state.play ? 'Pause' : 'Play' }
+            <button className="play-button" onClick={this.playPause}>
+              {this.state.play ? 'Pause' : 'Play'}
             </button>
           </div>
 
           <div className="intervals">
             <h2 className="sub-header">Intervals</h2>
-            <IntervalTracker current={ this.state.interval } total={ segment.intervals.length - 2 } />
+            <IntervalTracker current={this.state.interval} total={segment.intervals.length - 2} />
           </div>
         </div>
 
         <div className="center navigation">
           <Navigation
-            week={ segment.week }
-            day={ segment.day }
-            triggerNavigation={ this.updateSegment }
-            showModal={ this.showModal } />
+            week={segment.week}
+            day={segment.day}
+            triggerNavigation={this.updateSegment}
+            showModal={this.showModal}
+          />
         </div>
 
-        {
-          this.state.showModal
-            && <PickerModal segments={ SEGMENTS }
-                currentSegment={ this.state.segment }
-                updateSegment={ this.updateSegment }
-                hideModal={ this.hideModal } />
-        }
+        {this.state.showModal && (
+          <PickerModal
+            segments={SEGMENTS}
+            currentSegment={this.state.segment}
+            updateSegment={this.updateSegment}
+            hideModal={this.hideModal}
+          />
+        )}
       </div>
     );
   }

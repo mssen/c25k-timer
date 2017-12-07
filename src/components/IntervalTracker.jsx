@@ -8,16 +8,16 @@ const IntervalTracker = ({ current, total }) => {
 
   return (
     <div>
-      <span className="current-interval">{ displayCurrent }</span>
+      <span className="current-interval">{displayCurrent}</span>
       /
-      <span className="total-interval">{ total }</span>
+      <span className="total-interval">{total}</span>
     </div>
-  )
+  );
 };
 
 IntervalTracker.propTypes = {
   current: PropTypes.number.isRequired,
   total: PropTypes.number.isRequired
-}
+};
 
 export default IntervalTracker;

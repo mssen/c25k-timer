@@ -10,7 +10,7 @@ class Timer extends React.Component {
     this.state = {
       seconds: 0,
       intervalIndex: 0
-    }
+    };
   }
 
   tick() {
@@ -18,22 +18,21 @@ class Timer extends React.Component {
 
     // End of interval
     if (nextSeconds > this.props.intervals[this.state.intervalIndex]) {
-
       // End of segment
       if (this.state.intervalIndex === this.props.intervals.length - 1) {
         this.stop();
 
-      // On to the next interval
+        // On to the next interval
       } else {
         const newIntervalIndex = this.state.intervalIndex + 1;
-        this.setState(({
+        this.setState({
           seconds: 1,
           intervalIndex: newIntervalIndex
-        }));
+        });
         this.props.updateInterval(newIntervalIndex);
       }
 
-    // Business as usual
+      // Business as usual
     } else {
       this.setState({
         seconds: nextSeconds
@@ -81,11 +80,9 @@ class Timer extends React.Component {
   render() {
     return (
       <div>
-        <span className="current-time">
-          { this.format(this.state.seconds) }
-        </span>
+        <span className="current-time">{this.format(this.state.seconds)}</span>
         <span className="total-time">
-          /{ this.format(this.props.intervals[this.state.intervalIndex]) }
+          /{this.format(this.props.intervals[this.state.intervalIndex])}
         </span>
       </div>
     );
@@ -97,6 +94,6 @@ Timer.propTypes = {
   updateInterval: PropTypes.func.isRequired,
   segment: PropTypes.number.isRequired,
   play: PropTypes.bool.isRequired
-}
+};
 
 export default Timer;
