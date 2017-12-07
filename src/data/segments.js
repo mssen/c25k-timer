@@ -5,32 +5,134 @@ export const SEGMENTS = [
   {
     week: 1,
     day: 1,
-    intervals: [WARMUP, 60, 90, 60, 90, 60, 90, 60, 90, 60, 90, 60, 90, 60, 90, 60, 90, COOLDOWN]
+    intervals: [
+      WARMUP,
+      60,
+      90,
+      60,
+      90,
+      60,
+      90,
+      60,
+      90,
+      60,
+      90,
+      60,
+      90,
+      60,
+      90,
+      60,
+      90,
+      COOLDOWN
+    ]
   },
   {
     week: 1,
     day: 2,
-    intervals: [WARMUP, 60, 90, 60, 90, 60, 90, 60, 90, 60, 90, 60, 90, 60, 90, 60, 90, COOLDOWN]
+    intervals: [
+      WARMUP,
+      60,
+      90,
+      60,
+      90,
+      60,
+      90,
+      60,
+      90,
+      60,
+      90,
+      60,
+      90,
+      60,
+      90,
+      60,
+      90,
+      COOLDOWN
+    ]
   },
   {
     week: 1,
     day: 3,
-    intervals: [WARMUP, 60, 90, 60, 90, 60, 90, 60, 90, 60, 90, 60, 90, 60, 90, 60, 90, COOLDOWN]
+    intervals: [
+      WARMUP,
+      60,
+      90,
+      60,
+      90,
+      60,
+      90,
+      60,
+      90,
+      60,
+      90,
+      60,
+      90,
+      60,
+      90,
+      60,
+      90,
+      COOLDOWN
+    ]
   },
   {
     week: 2,
     day: 1,
-    intervals: [WARMUP, 90, 120, 90, 120, 90, 120, 90, 120, 90, 120, 90, 120, COOLDOWN]
+    intervals: [
+      WARMUP,
+      90,
+      120,
+      90,
+      120,
+      90,
+      120,
+      90,
+      120,
+      90,
+      120,
+      90,
+      120,
+      COOLDOWN
+    ]
   },
   {
     week: 2,
     day: 2,
-    intervals: [WARMUP, 90, 120, 90, 120, 90, 120, 90, 120, 90, 120, 90, 120, COOLDOWN]
+    intervals: [
+      WARMUP,
+      90,
+      120,
+      90,
+      120,
+      90,
+      120,
+      90,
+      120,
+      90,
+      120,
+      90,
+      120,
+      COOLDOWN
+    ]
   },
   {
     week: 2,
     day: 3,
-    intervals: [WARMUP, 90, 120, 90, 120, 90, 120, 90, 120, 90, 120, 90, 120, COOLDOWN]
+    intervals: [
+      WARMUP,
+      90,
+      120,
+      90,
+      120,
+      90,
+      120,
+      90,
+      120,
+      90,
+      120,
+      90,
+      120,
+      COOLDOWN
+    ]
   },
   {
     week: 3,

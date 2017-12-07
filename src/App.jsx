@@ -20,51 +20,48 @@ class App extends React.Component {
     };
 
     this.audio = new Audio(ding);
-
-    this.updateSegment = this.updateSegment.bind(this);
-    this.updateInterval = this.updateInterval.bind(this);
-    this.hideModal = this.hideModal.bind(this);
-    this.showModal = this.showModal.bind(this);
-    this.playPause = this.playPause.bind(this);
   }
 
-  updateSegment(adjustment) {
-    this.setState(prevState => ({
+  updateSegment = (adjustment) => {
+    this.setState((prevState) => ({
       segment: prevState.segment + adjustment,
       interval: 0,
       play: false,
       showModal: false
     }));
-  }
+  };
 
-  updateInterval(newInterval) {
+  updateInterval = (newInterval) => {
     this.setState({ interval: newInterval });
     this.audio.play();
-  }
+  };
 
-  showModal() {
+  showModal = () => {
     this.setState({
       showModal: true
     });
-  }
+  };
 
-  hideModal() {
+  hideModal = () => {
     this.setState({
       showModal: false
     });
-  }
+  };
 
-  playPause() {
-    this.setState(prevState => ({
+  playPause = () => {
+    this.setState((prevState) => ({
       play: !prevState.play
     }));
-  }
+  };
 
   getIntervalType() {
     const currentInterval = this.state.interval;
     if (currentInterval === 0) {
       return 'Warmup';
-    } else if (currentInterval === SEGMENTS[this.state.segment].intervals.length - 1) {
+    } else if (
+      currentInterval ===
+      SEGMENTS[this.state.segment].intervals.length - 1
+    ) {
       return 'Cooldown';
     } else if (currentInterval % 2 === 1) {
       return 'Run';
@@ -95,7 +92,9 @@ class App extends React.Component {
           <div>
             <h2 className="sub-header">Total Time</h2>
             <Timer
-              intervals={[segment.intervals.reduce((prev, curr) => prev + curr)]}
+              intervals={[
+                segment.intervals.reduce((prev, curr) => prev + curr)
+              ]}
               updateInterval={() => ''}
               segment={this.state.segment}
               play={this.state.play}
@@ -110,7 +109,10 @@ class App extends React.Component {
 
           <div className="intervals">
             <h2 className="sub-header">Intervals</h2>
-            <IntervalTracker current={this.state.interval} total={segment.intervals.length - 2} />
+            <IntervalTracker
+              current={this.state.interval}
+              total={segment.intervals.length - 2}
+            />
           </div>
         </div>
 

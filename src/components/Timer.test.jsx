@@ -5,12 +5,24 @@ import Timer from './Timer';
 jest.useFakeTimers();
 
 it('renders without crashing', () => {
-  shallow(<Timer intervals={[10]} updateInterval={() => ''} segment={0} play={false} />);
+  shallow(
+    <Timer
+      intervals={[10]}
+      updateInterval={() => ''}
+      segment={0}
+      play={false}
+    />
+  );
 });
 
 it('is paused when created', () => {
   const wrapper = mount(
-    <Timer intervals={[10]} updateInterval={() => ''} segment={0} play={false} />
+    <Timer
+      intervals={[10]}
+      updateInterval={() => ''}
+      segment={0}
+      play={false}
+    />
   );
   expect(wrapper).toMatchSnapshot();
   jest.runTimersToTime(1000);
@@ -52,7 +64,12 @@ describe('next interval', () => {
   it('goes on to the next interval', () => {
     const updateIntervalStub = jest.fn();
     const wrapper = mount(
-      <Timer intervals={[5, 5]} play={true} updateInterval={updateIntervalStub} segment={0} />
+      <Timer
+        intervals={[5, 5]}
+        play={true}
+        updateInterval={updateIntervalStub}
+        segment={0}
+      />
     );
     expect(wrapper).toMatchSnapshot();
     jest.runTimersToTime(2000);
@@ -65,7 +82,12 @@ describe('next interval', () => {
   it('stops when it was the last interval', () => {
     const updateIntervalStub = jest.fn();
     const wrapper = mount(
-      <Timer intervals={[5, 5]} play={true} updateInterval={updateIntervalStub} segment={0} />
+      <Timer
+        intervals={[5, 5]}
+        play={true}
+        updateInterval={updateIntervalStub}
+        segment={0}
+      />
     );
     jest.runTimersToTime(12000);
     expect(wrapper).toMatchSnapshot();

@@ -74,7 +74,12 @@ class Timer extends React.Component {
 
   format(seconds) {
     const remainderSeconds = seconds % 60;
-    return Math.floor(seconds / 60) + ':' + (remainderSeconds < 10 ? '0' : '') + remainderSeconds;
+    return (
+      Math.floor(seconds / 60) +
+      ':' +
+      (remainderSeconds < 10 ? '0' : '') +
+      remainderSeconds
+    );
   }
 
   render() {

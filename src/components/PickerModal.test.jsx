@@ -13,7 +13,12 @@ const segments = [
 
 it('renders without crashing', () => {
   shallow(
-    <PickerModal segments={[]} currentSegment={0} hideModal={() => ''} updateSegment={() => ''} />
+    <PickerModal
+      segments={[]}
+      currentSegment={0}
+      hideModal={() => ''}
+      updateSegment={() => ''}
+    />
   );
 });
 

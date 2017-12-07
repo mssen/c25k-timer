@@ -3,7 +3,12 @@ import PropTypes from 'prop-types';
 
 import './PickerModal.css';
 
-const PickerModal = ({ segments, currentSegment, hideModal, updateSegment }) => (
+const PickerModal = ({
+  segments,
+  currentSegment,
+  hideModal,
+  updateSegment
+}) => (
   <div>
     <div className="overlay" />
     <div className="modal-container">
