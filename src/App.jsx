@@ -75,10 +75,12 @@ class App extends React.Component {
 
     return (
       <div className="main">
-        <h1 className="main-header">Week {segment.week}</h1>
-        <h1 className="main-header gray">Day {segment.day}</h1>
+        <div className="header">
+          <h1 className="main-header">Week {segment.week}</h1>
+          <h1 className="main-header gray">Day {segment.day}</h1>
+        </div>
 
-        <div className="interval-timer center">
+        <div className="interval-timer">
           <span className="interval-text gray">{this.getIntervalType()}</span>
           <Timer
             intervals={segment.intervals}
@@ -88,35 +90,31 @@ class App extends React.Component {
           />
         </div>
 
-        <div className="horizontal">
-          <div>
-            <h2 className="sub-header">Total Time</h2>
-            <Timer
-              intervals={[
-                segment.intervals.reduce((prev, curr) => prev + curr)
-              ]}
-              updateInterval={() => ''}
-              segment={this.state.segment}
-              play={this.state.play}
-            />
-          </div>
-
-          <div className="play-container">
-            <button className="play-button" onClick={this.playPause}>
-              {this.state.play ? 'Pause' : 'Play'}
-            </button>
-          </div>
-
-          <div className="intervals">
-            <h2 className="sub-header">Intervals</h2>
-            <IntervalTracker
-              current={this.state.interval}
-              total={segment.intervals.length - 2}
-            />
-          </div>
+        <div className="total-timer">
+          <h2 className="sub-header">Total Time</h2>
+          <Timer
+            intervals={[segment.intervals.reduce((prev, curr) => prev + curr)]}
+            updateInterval={() => ''}
+            segment={this.state.segment}
+            play={this.state.play}
+          />
         </div>
 
-        <div className="center navigation">
+        <div className="play-pause">
+          <button className="play-button" onClick={this.playPause}>
+            {this.state.play ? 'Pause' : 'Play'}
+          </button>
+        </div>
+
+        <div className="intervals">
+          <h2 className="sub-header">Intervals</h2>
+          <IntervalTracker
+            current={this.state.interval}
+            total={segment.intervals.length - 2}
+          />
+        </div>
+
+        <div className="navigation">
           <Navigation
             week={segment.week}
             day={segment.day}
