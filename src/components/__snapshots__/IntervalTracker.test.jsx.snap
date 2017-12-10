@@ -1,19 +1,33 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`shows Cooldown when current interval is more than total 1`] = `
-<div>
-  Cooldown
-</div>
-`;
-
-exports[`shows Warmup when current interval is 0 1`] = `
-<div>
-  Warmup
-</div>
-`;
-
 exports[`shows current interval 1`] = `
 <div>
-  1/4
+  <span
+    className="current-interval"
+  >
+    1
+  </span>
+  /
+  <span
+    className="total-interval"
+  >
+    4
+  </span>
+</div>
+`;
+
+exports[`shows total / total when current interval is more than total 1`] = `
+<div>
+  <span
+    className="current-interval"
+  >
+    4
+  </span>
+  /
+  <span
+    className="total-interval"
+  >
+    4
+  </span>
 </div>
 `;

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`can pause 1`] = `
+exports[`can start / pause 1`] = `
 <Timer
   intervals={
     Array [
@@ -27,34 +27,7 @@ exports[`can pause 1`] = `
 </Timer>
 `;
 
-exports[`can pause 2`] = `
-<Timer
-  intervals={
-    Array [
-      10,
-    ]
-  }
-  play={true}
-  segment={0}
-  updateInterval={[Function]}
->
-  <div>
-    <span
-      className="current-time"
-    >
-      0:01
-    </span>
-    <span
-      className="total-time"
-    >
-      /
-      0:10
-    </span>
-  </div>
-</Timer>
-`;
-
-exports[`can pause 3`] = `
+exports[`can start / pause 2`] = `
 <Timer
   intervals={
     Array [
@@ -81,41 +54,14 @@ exports[`can pause 3`] = `
 </Timer>
 `;
 
-exports[`can start 1`] = `
+exports[`can start / pause 3`] = `
 <Timer
   intervals={
     Array [
       10,
     ]
   }
-  play={true}
-  segment={0}
-  updateInterval={[Function]}
->
-  <div>
-    <span
-      className="current-time"
-    >
-      0:00
-    </span>
-    <span
-      className="total-time"
-    >
-      /
-      0:10
-    </span>
-  </div>
-</Timer>
-`;
-
-exports[`can start 2`] = `
-<Timer
-  intervals={
-    Array [
-      10,
-    ]
-  }
-  play={true}
+  play={false}
   segment={0}
   updateInterval={[Function]}
 >
@@ -189,146 +135,7 @@ exports[`is paused when created 2`] = `
 </Timer>
 `;
 
-exports[`next interval goes on to the next interval 1`] = `
-<Timer
-  intervals={
-    Array [
-      5,
-      5,
-    ]
-  }
-  play={true}
-  segment={0}
-  updateInterval={[Function]}
->
-  <div>
-    <span
-      className="current-time"
-    >
-      0:00
-    </span>
-    <span
-      className="total-time"
-    >
-      /
-      0:05
-    </span>
-  </div>
-</Timer>
-`;
-
-exports[`next interval goes on to the next interval 2`] = `
-<Timer
-  intervals={
-    Array [
-      5,
-      5,
-    ]
-  }
-  play={true}
-  segment={0}
-  updateInterval={[Function]}
->
-  <div>
-    <span
-      className="current-time"
-    >
-      0:02
-    </span>
-    <span
-      className="total-time"
-    >
-      /
-      0:05
-    </span>
-  </div>
-</Timer>
-`;
-
-exports[`next interval goes on to the next interval 3`] = `
-<Timer
-  intervals={
-    Array [
-      5,
-      5,
-    ]
-  }
-  play={true}
-  segment={0}
-  updateInterval={[Function]}
->
-  <div>
-    <span
-      className="current-time"
-    >
-      0:01
-    </span>
-    <span
-      className="total-time"
-    >
-      /
-      0:05
-    </span>
-  </div>
-</Timer>
-`;
-
-exports[`next interval stops when it was the last interval 1`] = `
-<Timer
-  intervals={
-    Array [
-      5,
-      5,
-    ]
-  }
-  play={true}
-  segment={0}
-  updateInterval={[Function]}
->
-  <div>
-    <span
-      className="current-time"
-    >
-      0:05
-    </span>
-    <span
-      className="total-time"
-    >
-      /
-      0:05
-    </span>
-  </div>
-</Timer>
-`;
-
 exports[`switches over to the next segment 1`] = `
-<Timer
-  intervals={
-    Array [
-      10,
-    ]
-  }
-  play={true}
-  segment={1}
-  updateInterval={[Function]}
->
-  <div>
-    <span
-      className="current-time"
-    >
-      0:01
-    </span>
-    <span
-      className="total-time"
-    >
-      /
-      0:10
-    </span>
-  </div>
-</Timer>
-`;
-
-exports[`switches over to the next segment 2`] = `
 <Timer
   intervals={
     Array [

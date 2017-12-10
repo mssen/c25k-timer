@@ -16,10 +16,10 @@ it('can start/pause', () => {
   // Play
   playPauseButton.simulate('click');
   jest.runTimersToTime(1000);
+  playPauseButton.simulate('click');
   expect(wrapper.find('Timer')).toMatchSnapshot();
 
   // Pause
-  playPauseButton.simulate('click');
   jest.runTimersToTime(1000);
   expect(wrapper.find('Timer')).toMatchSnapshot();
 });
@@ -41,24 +41,24 @@ describe('gets correct interval type', () => {
   it('gets warmup', () => {
     const wrapper = shallow(<App />);
     wrapper.setState({ interval: 0 });
-    expect(wrapper.find('div > div').first()).toMatchSnapshot();
+    expect(wrapper.find('.interval-timer')).toMatchSnapshot();
   });
 
   it('gets cooldown', () => {
     const wrapper = shallow(<App />);
     wrapper.setState({ interval: 3 });
-    expect(wrapper.find('div > div').first()).toMatchSnapshot();
+    expect(wrapper.find('.interval-timer')).toMatchSnapshot();
   });
 
   it('gets run', () => {
     const wrapper = shallow(<App />);
     wrapper.setState({ interval: 1 });
-    expect(wrapper.find('div > div').first()).toMatchSnapshot();
+    expect(wrapper.find('.interval-timer')).toMatchSnapshot();
   });
 
   it('gets walk', () => {
     const wrapper = shallow(<App />);
     wrapper.setState({ interval: 2 });
-    expect(wrapper.find('div > div').first()).toMatchSnapshot();
+    expect(wrapper.find('.interval-timer')).toMatchSnapshot();
   });
 });
