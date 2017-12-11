@@ -3,26 +3,31 @@
 exports[`renders the correct previous and next week/day in middle of week 1`] = `
 <div>
   <button
+    className="nav-button"
     onClick={[Function]}
   >
     ‹‹ Week 
     1
-    , Day 
+    , Day
+     
     1
   </button>
   <button
+    className="nav-button"
     onClick={[Function]}
   >
     ...
   </button>
   <button
+    className="nav-button"
     onClick={[Function]}
   >
     Week 
     1
     , Day 
     3
-     ››
+     
+    ››
   </button>
 </div>
 `;
@@ -30,26 +35,31 @@ exports[`renders the correct previous and next week/day in middle of week 1`] = 
 exports[`renders the correct previous and next week/day on first day of week 1`] = `
 <div>
   <button
+    className="nav-button"
     onClick={[Function]}
   >
     ‹‹ Week 
     2
-    , Day 
+    , Day
+     
     3
   </button>
   <button
+    className="nav-button"
     onClick={[Function]}
   >
     ...
   </button>
   <button
+    className="nav-button"
     onClick={[Function]}
   >
     Week 
     3
     , Day 
     2
-     ››
+     
+    ››
   </button>
 </div>
 `;
@@ -57,26 +67,31 @@ exports[`renders the correct previous and next week/day on first day of week 1`]
 exports[`renders the correct previous and next week/day on last day of week 1`] = `
 <div>
   <button
+    className="nav-button"
     onClick={[Function]}
   >
     ‹‹ Week 
     1
-    , Day 
+    , Day
+     
     2
   </button>
   <button
+    className="nav-button"
     onClick={[Function]}
   >
     ...
   </button>
   <button
+    className="nav-button"
     onClick={[Function]}
   >
     Week 
     2
     , Day 
     1
-     ››
+     
+    ››
   </button>
 </div>
 `;

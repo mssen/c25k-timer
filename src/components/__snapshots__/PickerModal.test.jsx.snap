@@ -2,45 +2,75 @@
 
 exports[`renders weeks and days 1`] = `
 <div>
-  <header>
-    <h1>
-      Pick a Day
-    </h1>
-    <button
-      onClick={[Function]}
+  <div
+    className="overlay"
+  />
+  <div
+    className="modal-container"
+  >
+    <div
+      className="modal"
     >
-      Close
-    </button>
-  </header>
-  <button
-    onClick={[Function]}
-  >
-    Week 1, Day 1
-  </button>
-  <button
-    onClick={[Function]}
-  >
-    Week 1, Day 2
-  </button>
-  <button
-    onClick={[Function]}
-  >
-    Week 1, Day 3
-  </button>
-  <button
-    onClick={[Function]}
-  >
-    Week 2, Day 1
-  </button>
-  <button
-    onClick={[Function]}
-  >
-    Week 2, Day 2
-  </button>
-  <button
-    onClick={[Function]}
-  >
-    Week 2, Day 3
-  </button>
+      <header
+        className="modal-header"
+      >
+        <h1>
+          Pick a Day
+        </h1>
+        <button
+          className="close-button"
+          onClick={[Function]}
+        >
+          ✕
+        </button>
+      </header>
+      <div
+        className="modal-body"
+      >
+        <button
+          className="picker-button"
+          key="0"
+          onClick={[Function]}
+        >
+          Week 1, Day 1
+        </button>
+        <button
+          className="picker-button"
+          key="1"
+          onClick={[Function]}
+        >
+          Week 1, Day 2
+        </button>
+        <button
+          className="picker-button"
+          key="2"
+          onClick={[Function]}
+        >
+          Week 1, Day 3
+        </button>
+        <button
+          className="picker-button"
+          key="3"
+          onClick={[Function]}
+        >
+          Week 2, Day 1
+        </button>
+        <button
+          className="picker-button"
+          key="4"
+          onClick={[Function]}
+        >
+          Week 2, Day 2
+        </button>
+        <button
+          className="picker-button"
+          key="5"
+          onClick={[Function]}
+        >
+          Week 2, Day 3
+        </button>
+      </div>
+    </div>
+  </div>
 </div>
 `;
