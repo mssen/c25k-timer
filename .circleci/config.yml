@@ -36,6 +36,8 @@ jobs:
     working_directory: ~/c25k-timer
 
     steps:
+      - checkout
+      - run: yarn build
       - run: yarn deploy
 
 workflows:
