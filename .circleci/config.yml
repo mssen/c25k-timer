@@ -2,9 +2,6 @@ defaults: &defaults
   working_directory: ~/c25k-timer
   docker:
     - image: circleci/node:7.10
-  branches:
-    ignore:
-      - gh-pages
 
 version: 2
 jobs:
