@@ -23,11 +23,12 @@
   },
   "scripts": {
     "precommit": "lint-staged",
-    "predeploy": "npm run build",
+    "predeploy": "yarn build",
     "deploy": "gh-pages -d build -m \"Updates [ci skip]\"",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
+    "coverage": "yarn test -- --coverage",
     "eject": "react-scripts eject",
     "format": "prettier --write 'src/**/*.{js,jsx}'"
   }
