@@ -27,7 +27,7 @@ jobs:
       - run: yarn test
   deploy:
     <<: *defaults
-    
+
     steps:
       - checkout
       
@@ -43,6 +43,7 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
 
+      - run: git config --global -l
       - run: git config --global user.email circleci@circleci
       - run: git config --global user.name CircleCI
 
