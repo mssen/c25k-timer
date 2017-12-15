@@ -1,23 +1,19 @@
-# Javascript Node CircleCI 2.0 configuration file
-#
-# Check https://circleci.com/docs/2.0/language-javascript/ for more details
-#
+defaults: &defaults
+  working_directory: ~/c25k-timer
+  docker:
+    - image: circleci/node:7.10
+
 version: 2
 jobs:
   build:
-    docker:
-      - image: circleci/node:7.10
-      
-    working_directory: ~/c25k-timer
+    <<: *defaults
 
     steps:
       - checkout
 
-      # Download and cache dependencies
       - restore_cache:
           keys:
           - v1-dependencies-{{ checksum "package.json" }}
-          # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
 
       - run: yarn install
@@ -30,11 +26,8 @@ jobs:
       # run tests!
       - run: yarn test
   deploy:
-    docker:
-      - image: circleci/node:7.10
-
-    working_directory: ~/c25k-timer
-
+    <<: *defaults
+    
     steps:
       - checkout
       
