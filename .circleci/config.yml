@@ -36,13 +36,6 @@ jobs:
           - v1-dependencies-{{ checksum "package.json" }}
           - v1-dependencies-
 
-      - run: yarn install
-
-      - save_cache:
-          paths:
-            - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
-
       - run: git config --global user.email "$GH_EMAIL"
       - run: git config --global user.name "$GH_NAME"
       - run: git config --list
